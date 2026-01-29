@@ -1,4 +1,4 @@
-const TextareaInput = ({ label, name, value, onChange }) => {
+const TextareaInput = ({ label, name, value, onChange, required = false }) => {
   return (
     <div className='mb-4'>
       <label htmlFor={name} className='block font-semibold'>
@@ -10,6 +10,7 @@ const TextareaInput = ({ label, name, value, onChange }) => {
         name={name}
         value={value}
         onChange={onChange}
+        required={required}
       ></textarea>
     </div>
   );
