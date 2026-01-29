@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TextInput from './inputs/TextInput';
 
 const defaultState = {
   title: '',
@@ -46,18 +47,12 @@ const NoteForm = ({ notes, setNotes }) => {
 
       {isFormVisible && (
         <form onSubmit={handleSubmit} className='mb-6'>
-          <div className='mb-4'>
-            <label htmlFor='title' className='block font-semibold'>
-              Title
-            </label>
-            <input
-              type='text'
-              name='title'
-              className='w-full p-2 border rounded-lg'
-              value={formData.title}
-              onChange={handleChange}
-            />
-          </div>
+          <TextInput
+            label='Title'
+            name='title'
+            value={formData.title}
+            onChange={handleChange}
+          />
 
           <div className='mb-4'>
             <label htmlFor='priority' className='block font-semibold'>

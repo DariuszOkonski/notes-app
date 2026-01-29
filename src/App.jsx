@@ -4,20 +4,20 @@ import NoteList from './components/NoteList';
 
 function App() {
   const [notes, setNotes] = useState([
-    {
-      id: 1,
-      title: 'first title',
-      priority: 'Medium',
-      category: 'Work',
-      description: 'Some first description',
-    },
-    {
-      id: 2,
-      title: 'second title',
-      priority: 'Medium',
-      category: 'Work',
-      description: 'Some second description',
-    },
+    // {
+    //   id: 1,
+    //   title: 'first title',
+    //   priority: 'Medium',
+    //   category: 'Work',
+    //   description: 'Some first description',
+    // },
+    // {
+    //   id: 2,
+    //   title: 'second title',
+    //   priority: 'Medium',
+    //   category: 'Work',
+    //   description: 'Some second description',
+    // },
   ]);
 
   return (
