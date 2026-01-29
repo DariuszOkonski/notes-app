@@ -7,7 +7,7 @@ const NoteForm = () => {
   const [description, setDescription] = useState('');
 
   return (
-    <form action=''>
+    <form>
       <div className='mb-4'>
         <label htmlFor='title' className='block font-semibold'>
           Title
@@ -56,13 +56,17 @@ const NoteForm = () => {
         <label htmlFor='description' className='block font-semibold'>
           Description
         </label>
-        <input
+        <textarea
           type='text'
           className='w-full p-2 border rounded-lg'
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-        />
+        ></textarea>
       </div>
+
+      <button className='w-full bg-purple-500 text-white py-2 rounded-lg cursor-pointer hover:bg-purple-600'>
+        Add Note
+      </button>
     </form>
   );
 };
