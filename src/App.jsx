@@ -28,7 +28,13 @@ function App() {
   ]);
 
   const handleDelete = (id) => {
-    setNotes(notes.filter((note) => note.id !== id));
+    const confirmDelete = window.confirm(
+      'Are you sure you want to delete this note?',
+    );
+
+    if (confirmDelete) {
+      setNotes(notes.filter((note) => note.id !== id));
+    }
   };
 
   return (
