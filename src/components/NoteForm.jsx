@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const NoteForm = () => {
-  const [title, setTitle] = useState('');
-  const [priority, setPriority] = useState('Medium');
-  const [category, setCategory] = useState('Work');
-  const [description, setDescription] = useState('');
+  // const [title, setTitle] = useState('');
+  // const [priority, setPriority] = useState('Medium');
+  // const [category, setCategory] = useState('Work');
+  // const [description, setDescription] = useState('');
+  const [formData, setFormData] = useState({
+    title: '',
+    priority: 'Medium',
+    category: 'Work',
+    description: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <form>
@@ -14,9 +27,10 @@ const NoteForm = () => {
         </label>
         <input
           type='text'
+          name='title'
           className='w-full p-2 border rounded-lg'
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={formData.title}
+          onChange={handleChange}
         />
       </div>
 
@@ -27,8 +41,9 @@ const NoteForm = () => {
         <select
           type='text'
           className='w-full p-2 border rounded-lg'
-          value={priority}
-          onChange={(e) => setPriority(e.target.value)}
+          name='priority'
+          value={formData.priority}
+          onChange={handleChange}
         >
           <option value='High'>High</option>
           <option value='Medium'>Medium</option>
@@ -43,8 +58,9 @@ const NoteForm = () => {
         <select
           type='text'
           className='w-full p-2 border rounded-lg'
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
+          name='category'
+          value={formData.category}
+          onChange={handleChange}
         >
           <option value='Work'>Work</option>
           <option value='Personal'>Personal</option>
@@ -59,8 +75,9 @@ const NoteForm = () => {
         <textarea
           type='text'
           className='w-full p-2 border rounded-lg'
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          name='description'
+          value={formData.description}
+          onChange={handleChange}
         ></textarea>
       </div>
 
