@@ -7,7 +7,7 @@ function App() {
     {
       id: 1,
       title: 'first title',
-      priority: 'Medium',
+      priority: 'High',
       category: 'Work',
       description: 'Some first description',
     },
@@ -21,7 +21,7 @@ function App() {
     {
       id: 3,
       title: 'third title',
-      priority: 'Medium',
+      priority: 'Low',
       category: 'Work',
       description: 'Some third second description',
     },
